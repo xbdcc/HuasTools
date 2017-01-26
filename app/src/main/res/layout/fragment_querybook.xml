@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include
+        layout="@layout/include_load_progress"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_space">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <EditText
+                    style="@style/edittext_normal"
+                    android:id="@+id/et_name"
+                    android:layout_marginRight="@dimen/margin_space"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button"
+                    android:textColor="@drawable/button_text_color"
+                    android:text="@string/search"
+                    android:id="@+id/b_search"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_type"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_space"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    style="@style/radio_button"
+                    android:text="@string/book_title"
+                    android:checked="true"
+                    android:id="@+id/rb_book_title"/>
+                <RadioButton
+                    style="@style/radio_button"
+                    android:text="@string/book_author"
+                    android:id="@+id/rb_book_author"
+                    />
+                <RadioButton
+                    style="@style/radio_button"
+                    android:text="@string/book_theme"
+                    android:id="@+id/rb_book_theme"/>
+                <RadioButton
+                    style="@style/radio_button"
+                    android:text="@string/book_isbn"
+                    android:id="@+id/rb_book_isbn"
+                    android:checked="false"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_space"
+                android:visibility="invisible"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/ll_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_space"
+                android:layout_marginBottom="15dp"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/b_book_last_page"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/round_button"
+                    android:textColor="@drawable/button_text_color"
+                    android:text="上一页"/>
+                <Button
+                    android:id="@+id/b_book_next_page"
+                    android:layout_width="100dp"
+                    android:background="@drawable/round_button"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_height="40dp"
+                    android:textColor="@drawable/button_text_color"
+                    android:text="下一页"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

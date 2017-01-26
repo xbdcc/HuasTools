@@ -1,0 +1,31 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 字体规范-->
+    <dimen name="text_size_micro">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+
+    <!-- 控件高度-->
+    <dimen name="menu_main">60dp</dimen>
+    <dimen name="title_bar">50dp</dimen>
+
+    <dimen name="menu_line">0.1dp</dimen>//主菜单分割线高度
+    <dimen name="stroke_width">0.5dp</dimen>
+    <dimen name="button_retry_width">200dp</dimen>//重试按钮宽度
+    <dimen name="button_retry_height">60dp</dimen>//重试按钮高度
+
+    <dimen name="button_normal_width">100dp</dimen>//普通按钮宽度
+    <dimen name="button_normal_height">40dp</dimen>//普通按钮高度
+
+    <dimen name="editetext_normal_height">40dp</dimen>
+    <!--间距-->
+    <dimen name="margin_space">10dp</dimen>
+
+    <!-- 详情信息分割线高度-->
+    <dimen name="line_height">0.1dp</dimen>
+
+</resources>

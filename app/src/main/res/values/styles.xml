@@ -1,0 +1,91 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue_light</item>//导航栏颜色
+        <item name="colorPrimaryDark">@color/blue_light2</item>//电源处颜色
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/blue_text</item>//导航标题颜色
+        <item name="android:windowBackground">@color/white</item>//背景颜色
+    </style>
+
+    <style name="AppTheme" parent="BaseAppTheme" />
+
+    <style name="AppTheme.ProgressBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">@color/gray_light</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+
+    <!-- 菜单栏-->
+    <style name="tab_radio">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!--<item name="android:drawablePadding">5dp</item>-->
+        <item name="android:textSize">@dimen/text_size_micro</item>
+        <item name="android:textColor">@color/menu_text</item>
+    </style>
+
+    <!-- 菜单栏分割线-->
+    <style name="menu_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/menu_line</item>
+        <item name="android:background">@color/menu_line</item>
+    </style>
+
+    <!-- Button按钮 -->
+    <style name="retry_button">
+        <item name="android:layout_width">@dimen/button_retry_width</item>
+        <item name="android:layout_height">@dimen/button_retry_height</item>
+        <item name="android:background">@drawable/round_button</item>
+        <item name="android:textColor">@drawable/button_text_color</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!--输入框-->
+    <style name="edittext_normal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/editetext_normal_height</item>
+        <item name="android:background">@drawable/round_edittext_normal</item>
+    </style>
+
+    <!--单选按钮-->
+    <style name="radio_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/radio_button</item>
+        <item name="android:textColor">@drawable/radio_button_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!--详细信息分割线-->
+    <style name="detail_line_vertical">
+        <item name="android:layout_height">@dimen/line_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/margin_space</item>
+        <item name="android:layout_marginBottom">@dimen/margin_space</item>
+        <item name="android:background">@color/gray_bright</item>
+    </style>
+
+</resources>

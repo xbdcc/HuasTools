@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">文理小助手</string>
+
+    <!-- activity和模块类的名称-->
+    <string name="home">首页</string>
+    <string name="education">教务系统</string>
+    <string name="library">数字图书馆</string>
+    <string name="sunshine">阳光服务</string>
+    <string name="person">个人</string>
+    <string name="about">关于</string>
+    <string name="check_update">检测更新</string>
+    <string name="contact_me">联系我</string>
+
+    <!-- 公共字段-->
+    <string name="unkonown_error">服务端异常或网络超时，请稍后再试！</string>
+    <string name="no_net">网络异常，请检查网络连接</string>
+    <string name="no_data">没有数据</string>
+    <string name="please_login">请先登录</string>
+    <string name="data_loading">数据加载中，请稍后...</string>
+    <string name="can_not_null">输入不能为空</string>
+    <string name="retry">点击重试</string>
+    <string name="error">网络或服务异常，请检查网络或服务器后点击重试!</string>
+    <string name="submit">提交</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="about_content">"　　"本APP仅为文理同胞服务，不做任何商业目的，请不要使用本APP做商业用途。\n
+        "　　"经过多种版本变迁以及学校各网站的更新，新的版本将会更加优化。因数据都是网上抓取下来的，所以网站如果有问题可能会有一点bug。
+        由于学校网站对有些网络没开放，学校教务系统和阳光服务网站可能电信网能完全访问，其他网可能访问不了。大部分功能都已实现
+        ，最新版算是比较稳定的了。希望能为有需要的文理学子提供帮助。\n"　　"
+        如有问题可及时联系我处理，也可以关注我个人公众微信号:“ljty_shwj”，以后有些好东西会分享在上面。</string>
+
+    <!-- 教务系统字段-->
+    <string name="score">成绩</string>
+    <string name="schedule">课表</string>
+    <string name="course_selection">选课</string>
+    <string name="evaluate">评教</string>
+    <string name="education_login_please">亲，你还没有登录哦！</string>
+    <string name="education_login_button">点我登录</string>
+
+    <!--成绩-->
+    <string name="course_property">课程性质：</string>
+    <string name="course_grade">成绩：</string>
+    <string name="course_time">开课学期：</string>
+    <string name="course_id">课程编号：</string>
+    <string name="course_credit">学分：</string>
+    <string name="course_class_times">学时：</string>
+    <string name="course_evaluation_mode">考核方式：</string>
+    <string name="course_attribute">课程性质：</string>
+    <string name="score_detail">成绩详情</string>
+
+    <!-- 教务系统评教-->
+    <string name="evaluate_course_name">课程名称：</string>
+    <string name="evaluate_teacher_name">授课教师：</string>
+    <string name="evaluate_total_score">总评分：</string>
+    <string name="evaluate_is_evaluate">已评：</string>
+    <string name="evaluate_is_submit">是否提交：</string>
+    <string name="evaluate_detail">评教详情信息</string>
+    <string name="evaluate_advice">你对本课程教师教学意见与建议是什么？</string>
+    <string name="can_not_evaluate">评教未开放</string>
+
+    <!-- 教务系统选课字段-->
+    <string name="course_name">课程名称：</string>
+    <string name="course_score">课程学分：</string>
+    <string name="course_limit_selected">限选人数：</string>
+    <string name="course_has_selected">已选人数：</string>
+    <string name="can_not_select_course">选课未开放</string>
+    <string name="no_select_course">没有可选的课</string>
+    <string name="course_detail">选修课详情</string>
+    <string name="course_control_management">监控管理</string>
+    <string name="course_control_setting">监控设置</string>
+    <string name="course_control_name">监控课程名</string>
+    <string name="course_control_success">抢课成功通知栏提醒：</string>
+    <string name="course_control_speed">监控速度：</string>
+    <string name="course_control_speed_high">高速</string>
+    <string name="course_control_speed_medium">中速</string>
+    <string name="course_control_speed_low">低速</string>
+    <string name="course_control_result">查询结果</string>
+    <string name="course_control_start">开始监控</string>
+
+    <!--数字图书馆字段-->
+    <string name="query_book">查书</string>
+    <string name="renew_book">续借</string>
+    
+    <string name="sunshine_reply">回复</string>
+    <string name="sunshine_talk">说话</string>
+    <string name="password">密码</string>
+    <string name="number">学号</string>
+    <string name="login">登录</string>
+
+
+    <!--数字图书馆字段-->
+    <string name="search">搜索</string>
+    <string name="book_title">题名 </string>
+    <string name="book_author">作者</string>
+    <string name="book_theme">主题词</string>
+    <string name="book_isbn">ISBN</string>
+
+
+
+    <!-- 教育阳光平台查看回复数据 -->
+    <string name="i_want_to_say">我要说话</string>
+    <string name="see_reply">查看回复</string>
+    <string name="serial_number">流水号</string>
+    <string name="theme">主题</string>
+    <string name="date">日期</string>
+    <string name="category">类别</string>
+    <string name="accepting_unit">受理单位</string>
+    <string name="processing_status">处理状态</string>
+    <string name="acceptance_number">受理单号</string>
+
+    <!-- 我要说话页面数据 -->
+    <string name="letter_category">信件类别:</string>
+    <string name="consultation">咨询</string>
+    <string name="advice">建议</string>
+    <string name="complaint">投诉</string>
+    <string name="praise">表扬</string>
+    <string name="help">求助</string>
+    <string name="commit_object">提交对象:</string>
+    <string name="content">内容:</string>
+    <string name="name">姓名:</string>
+    <string name="email">Email:</string>
+    <string name="mobile_phone">手机号码</string>
+    <string name="must_fill_in">必须填写</string>
+
+</resources>

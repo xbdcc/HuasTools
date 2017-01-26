@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.view.ViewPager android:id="@id/viewPager" android:background="#ffffffff" android:persistentDrawingCache="animation" android:descendantFocusability="beforeDescendants" android:layout_width="wrap_content" android:layout_height="fill_parent" android:flipInterval="30" android:layout_above="@id/v_menu_line" />
+    <View android:id="@id/v_menu_line" android:layout_above="@id/rg_menu" style="@style/menu_line" />
+    <RadioGroup android:orientation="horizontal" android:id="@id/rg_menu" android:background="@color/gray_light" android:layout_width="fill_parent" android:layout_height="@dimen/menu_main" android:layout_alignParentBottom="true">
+        <RadioButton android:id="@id/rb_home" android:checked="true" android:text="@string/home" android:drawableTop="@drawable/menu_home" style="@style/tab_radio" />
+        <RadioButton android:id="@id/rb_education" android:text="@string/education" android:drawableTop="@drawable/menu_education" style="@style/tab_radio" />
+        <RadioButton android:id="@id/rb_library" android:text="@string/library" android:drawableTop="@drawable/menu_library" style="@style/tab_radio" />
+        <RadioButton android:id="@id/rb_sunshine" android:text="@string/sunshine" android:drawableTop="@drawable/menu_sunshine" style="@style/tab_radio" />
+        <RadioButton android:id="@id/rb_person" android:text="@string/person" android:drawableTop="@drawable/menu_person" style="@style/tab_radio" />
+    </RadioGroup>
+</RelativeLayout>

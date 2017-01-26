@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_result"
+     android:layout_width="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="5dp"
+    android:textColor="@color/blue_light"
+    android:text="@string/no_data"
+    android:visibility="gone"
+    android:layout_height="wrap_content">
+
+    </TextView>

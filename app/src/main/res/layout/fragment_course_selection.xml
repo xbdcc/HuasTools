@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical" android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <include
+        layout="@layout/include_load_progress"
+        />
+
+    <include
+        layout="@layout/include_retry"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/ll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    >
+                    <Button
+                        android:id="@+id/b_course_selection_refresh"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_button"
+                        android:textColor="@drawable/button_text_color"
+                        android:visibility="gone"
+                        android:text="刷新"/>
+                    <Button
+                        android:id="@+id/b_course_selection_control"
+                        android:layout_toRightOf="@id/b_course_selection_refresh"
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="100dp"
+                        android:background="@drawable/round_button"
+                        android:layout_height="40dp"
+                        android:textColor="@drawable/button_text_color"
+                        android:visibility="gone"
+                        android:text="监控管理"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <include layout="@layout/include_result"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_space"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_course_has_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已选课程："
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/tv_course_no_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="亲，你还没有选课哦！"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+            <ListView
+                android:id="@+id/lv_course_has_selection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_course_can_selection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可选课程："
+                android:visibility="gone"/>
+
+            <ListView
+                android:id="@+id/lv_course_can_selection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+            </ListView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

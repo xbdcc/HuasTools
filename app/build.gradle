@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt' // 注释处理
+apply plugin: 'me.tatarka.retrolambda'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+android {
+
+    compileSdkVersion 24
+    buildToolsVersion '24.0.0'
+    defaultConfig {
+        applicationId "com.xiaobudian.huastools"
+        minSdkVersion 18
+        targetSdkVersion 24
+        versionCode 14
+        versionName "3.2.2"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi',  'x86','armeabi-v7a' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "xxxxxxxxxxxxxxxxxxxxx", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled true//混淆
+            zipAlignEnabled true//zipAlign优化
+            shrinkResources true//移除无用的resource文件
+        }
+
+    }
+    // 注释冲突
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    //修改APK名字
+    android.applicationVariants.all{ variant ->
+        variant.outputs.each{ output ->
+            def outputFile=output.outputFile
+            if(outputFile!=null && outputFile.name.endsWith('.apk')){
+                //这里修改apk名字
+                def fileName = "HuasTools_${defaultConfig.versionName}_${releaseTime()}.apk"
+                output.outputFile=new File(outputFile.parent,fileName)
+            }
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    // 使用Java1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:design:24.0.0'
+    compile 'cn.jiguang:jpush:2.2.0'
+    // 此处以SDK 2.1.8版本为例
+    compile 'com.jakewharton:butterknife:7.0.1'
+    //butterknife
+    //dagger2
+    compile 'com.google.dagger:dagger:2.0.2'
+    compile 'com.google.dagger:dagger-compiler:2.0.2'
+    provided 'javax.annotation:jsr250-api:1.0'
+    compile 'com.github.markushi:circlebutton:1.1'
+    //Retrofit2
+    compile 'com.squareup.retrofit2:retrofit:2.0.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
+    compile 'com.squareup.retrofit2:converter-scalars:2.0.0'
+    compile 'org.jsoup:jsoup:1.9.1'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    //RxAndroid
+    compile 'io.reactivex:rxjava:1.1.0'
+    //推荐同时加载RxJava
+    //引入uiautomator
+    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+    compile 'com.tencent.bugly:crashreport:2.1.9'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:3.0'
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+}

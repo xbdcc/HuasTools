@@ -1,0 +1,236 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+    <variable
+        name="replyDetail"
+        type="com.xiaobudian.huastools.model.ReplyDetail" />
+    </data>
+    <LinearLayout
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:orientation="vertical">
+        <include
+
+            layout="@layout/include_toolbar"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                layout="@layout/include_load_view"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/ll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/margin_space">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_letter_thme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{replyDetail.letter_theme}" />
+
+                        <TextView
+                            android:id="@+id/tv_letter_thme_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{replyDetail.letter_theme_show}" />
+
+                    </LinearLayout>
+                    <View
+                        style="@style/detail_line_vertical"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_letter_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{replyDetail.letter_unit}" />
+
+                        <TextView
+                            android:id="@+id/tv_letter_unit_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{replyDetail.letter_unit_show}" />
+
+                    </LinearLayout>
+                    <View
+                        style="@style/detail_line_vertical"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_letter_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{replyDetail.letter_category}" />
+
+                        <TextView
+                            android:id="@+id/tv_letter_category_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{replyDetail.letter_category_show}" />
+
+                    </LinearLayout>
+                    <View
+                        style="@style/detail_line_vertical"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_letter_grade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{replyDetail.letter_grade}" />
+
+                        <TextView
+                            android:id="@+id/tv_letter_grade_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{replyDetail.letter_grade_show}" />
+
+                    </LinearLayout>
+                    <View
+                        style="@style/detail_line_vertical"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_submit_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{replyDetail.submit_time}" />
+
+                        <TextView
+                            android:id="@+id/tv_submit_time_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{replyDetail.submit_time_show}" />
+
+                    </LinearLayout>
+                    <View
+                        style="@style/detail_line_vertical"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_solve_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{replyDetail.solve_time}" />
+
+                        <TextView
+                            android:id="@+id/tv_solve_time_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{replyDetail.solve_time_show}" />
+
+                    </LinearLayout>
+                    <View
+                        style="@style/detail_line_vertical"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_click_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{replyDetail.click_time}" />
+
+                        <TextView
+                            android:id="@+id/tv_click_time_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{replyDetail.click_time_show}" />
+
+                    </LinearLayout>
+                    <View
+                        style="@style/detail_line_vertical"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_letter_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{replyDetail.letter_content}" />
+
+                        <TextView
+                            android:id="@+id/tv_letter_content_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{replyDetail.letter_content_show}" />
+
+                    </LinearLayout>
+                    <View
+                        style="@style/detail_line_vertical"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_current_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{replyDetail.current_state}" />
+
+                        <TextView
+                            android:id="@+id/tv_current_state_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{replyDetail.current_state_show}" />
+
+                    </LinearLayout>
+                    <View
+                        style="@style/detail_line_vertical"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_reply_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{replyDetail.reply_content}" />
+
+                        <TextView
+                            android:id="@+id/tv_replty_content_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{replyDetail.reply_content_show}" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

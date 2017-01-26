@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+   >
+    <include
+        android:id="@+id/t_menu"
+        layout="@layout/include_toolbar"/>
+
+    <android.support.v4.view.ViewPager
+    android:id="@+id/viewPager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/v_menu_line"
+    android:layout_below="@id/t_menu"
+    android:background="#ffffff"
+    android:flipInterval="30"
+    android:persistentDrawingCache="animation"
+    />
+    <View
+        android:id="@+id/v_menu_line"
+        style="@style/menu_line"
+        android:layout_above="@+id/rg_menu"
+        />
+
+    <!-- 底部菜单-->
+    <RadioGroup
+        android:id="@+id/rg_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_main"
+        android:background="@color/gray_light"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/tab_radio"
+            android:drawableTop="@drawable/menu_home"
+            android:checked="true"
+            android:text="@string/home"/>
+        <RadioButton
+            android:id="@+id/rb_education"
+            style="@style/tab_radio"
+            android:drawableTop="@drawable/menu_education"
+            android:text="@string/education"/>
+        <RadioButton
+            android:id="@+id/rb_library"
+            style="@style/tab_radio"
+            android:drawableTop="@drawable/menu_library"
+            android:text="@string/library"/>
+        <RadioButton
+            android:id="@+id/rb_sunshine"
+            style="@style/tab_radio"
+            android:drawableTop="@drawable/menu_sunshine"
+            android:text="@string/sunshine"/>
+        <RadioButton
+            android:id="@+id/rb_person"
+            style="@style/tab_radio"
+            android:drawableTop="@drawable/menu_person"
+            android:text="@string/person"/>
+    </RadioGroup>
+
+</RelativeLayout>

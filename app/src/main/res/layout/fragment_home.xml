@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ViewFlipper
+        android:id="@+id/viewflipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:inAnimation="@anim/enter_in_from_right"
+        android:outAnimation="@anim/enter_out_to_left"
+        android:foregroundGravity="top">
+
+
+        <include layout="@layout/viewflipper_1" />
+
+        <include layout="@layout/viewflipper_2" />
+
+        <include layout="@layout/viewflipper_3" />
+
+        <include layout="@layout/viewflipper_4" />
+
+        <include layout="@layout/viewflipper_5" />
+    </ViewFlipper>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ry_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_space">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

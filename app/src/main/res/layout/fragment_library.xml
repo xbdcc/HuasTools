@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/blue_light2"
+        app:tabSelectedTextColor="@color/blue_light"
+        app:tabTextColor="@color/gray_bright"
+        android:background="@color/gray_light"
+        app:tabGravity="fill"
+        app:tabMode="fixed" />
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/sliding_tabs"
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_below="@id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            layout="@layout/include_load_progress"
+            />
+
+        <include
+            layout="@layout/include_retry"
+            />
+    </RelativeLayout>
+</RelativeLayout>
