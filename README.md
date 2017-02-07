@@ -48,13 +48,39 @@
 Dagger2、RxJava、RxAndroid、Retrofit2、Butterknife、Bugly、Jpush、CircleButton、Jsoup
 
 ## 版本说明
-2015.2 v1.0 新增查课表、查阳光教育服务中心信息。       
-2015.4 v1.0.1 新增查数字图书馆书籍信息。           
-2015.8 v1.0.2 新增教务系统登录手机抢课等其他功能。     
-2015.9.1 v1.1 新增检测更新功能。     
-2015.9.2 v1.1.2 添加百度云推送功能。      
-2015.9.3 v1.1.3 添加推送更新版本信息，优化一些bug。       
-2016.1.8 v2.0 界面全新改版，获取新教务系统的数据。     
-2016.5.21 v3.0 全新开发，代码重构，改为MVP设计模式开发，重新实现功能，使用流行的开源框架。      
-2016.6.11 v3.1 新增教务系统评教功能，修复已知bug。     
-2016.6.21 v3.2 新增教务系统选课功能，修复已知bug。     
+2015.2 v1.0 新增查课表、查阳光教育服务中心信息。<br>
+2015.4 v1.0.1 新增查数字图书馆书籍信息。<br>
+2015.8 v1.0.2 新增教务系统登录手机抢课等其他功能。<br>
+2015.9.1 v1.1 新增检测更新功能。<br>
+2015.9.2 v1.1.2 添加百度云推送功能。<br>
+2015.9.3 v1.1.3 添加推送更新版本信息，优化一些bug。<br>
+2016.1.8 v2.0 界面全新改版，获取新教务系统的数据。<br>
+2016.5.21 v3.0 全新开发，代码重构，改为MVP设计模式开发，重新实现功能，使用流行的开源框架。<br>
+2016.6.11 v3.1 新增教务系统评教功能，修复已知bug。<br>
+2016.6.21 v3.2 新增教务系统选课功能，修复已知bug。   
+
+## 其他说明
+近期看了下APP登录教务系统登录不进去，打开教务系统网站发现现在页面登录功能变了需要加图片验证码了。由于近期比较忙没时间修复这个问题，大家想要看时可以在代码里跳过登录部分，其他功能大致还没变。有什么好的想法也希望提出改进。
+
+
+
+
+
+License
+=======
+
+    Copyright (c) 2017 小不点 <caochang1994@gmail.com>
+
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
