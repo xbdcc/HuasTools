@@ -67,7 +67,6 @@ Dagger2、RxJava、RxAndroid、Retrofit2、Butterknife、Bugly、Jpush、CircleB
 
 
 ## License
----
   ```
    Copyright (c) 2017 小不点 <caochang1994@gmail.com>
 
